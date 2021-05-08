@@ -1,0 +1,4 @@
+{
+    "files.autoSave": "off",
+    "tabnine.disable_file_regex": ["js", "scss", "html", "css"]
+}
