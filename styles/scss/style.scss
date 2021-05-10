@@ -1,5 +1,6 @@
 $preloaderSize: 20px;
 $refreshBtnBg: #0d6efd;
+$refreshBtnBgHover: #0b5fdd;
 $refreshBtnColor: #ffffff;
 
 *,
@@ -65,12 +66,12 @@ body {
 
 h1 {
     font-weight: 600;
-    font-size: 2.2rem;
+    font-size: 2rem;
     text-align: center;
 }
 
 p {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     line-height: 1.5;
 
     &#ayat-arabic {
@@ -85,15 +86,22 @@ p {
 
 #refresh-ayat {
     background: $refreshBtnBg;
+    border: 1px solid #2867c5;
     color: $refreshBtnColor;
     font-size: 1rem;
+    margin: 3rem 0;
     padding: 13px 10px;
     border-radius: 8px;
     cursor: pointer;
+    transition: 0.3s background;
+
+    &:hover {
+        background: $refreshBtnBgHover;
+    }
 }
 
 // Responsive Style
-@mixin mediaScreen($screenSize, $containerWidth) {
+@mixin responsiveContainer($screenSize, $containerWidth) {
     @media screen and (min-width: $screenSize) {
         .container {
             width: $containerWidth;
@@ -101,6 +109,15 @@ p {
     }
 }
 
-@include mediaScreen(768px, 90%);
-@include mediaScreen(992px, 85%);
-@include mediaScreen(1200px, 75%);
+@include responsiveContainer(768px, 90%);
+@include responsiveContainer(992px, 85%);
+@include responsiveContainer(1200px, 75%);
+
+@media screen and (min-width: 576px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+    p {
+        font-size: 1.6rem;
+    }
+}
