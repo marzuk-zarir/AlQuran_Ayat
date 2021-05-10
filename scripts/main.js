@@ -1,5 +1,5 @@
 const preloader = document.querySelector('#preloader');
-const BASE_URL = 'http://api.alquran.cloud/v1/ayah';
+const BASE_URL = 'https://api.alquran.cloud/v1/ayah';
 const ayatArabic = document.querySelector('#ayat-arabic');
 const ayatEnglish = document.querySelector('#ayat-english');
 const ayatReference = document.querySelector('#ayat-reference');
